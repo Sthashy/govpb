@@ -9,7 +9,7 @@ import UIKit
 
 class AvaliacaoTableViewCell: UITableViewCell {
     
-    static var avali : String = String(describing: AvaliacaoTableViewCell.avali)
+    static var avali : String = String(describing: AvaliacaoTableViewCell.self)
     
     static func Nib()-> UINib {
         
@@ -18,14 +18,13 @@ class AvaliacaoTableViewCell: UITableViewCell {
     }
     
     @IBOutlet weak var viewImage: UIImageView!
-    
-    
     @IBOutlet weak var nameLabelPriv: UILabel!
-    @IBAction func apppendButtonAva(_ sender: UIButton) {
-    }
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        configViewImage()
     }
     
     func configSetAva(aval: Avali){
@@ -34,7 +33,23 @@ class AvaliacaoTableViewCell: UITableViewCell {
         nameLabelPriv.text = aval.nameAva
     }
     
+    func configViewImage(){
+        
+        viewImage.tintColor = .gray
+        
+    }
     
+    
+    
+    
+    
+    @IBAction func appendButtoTela(_ sender: UIButton){
+        
+        
+        
+    }
     
     
 }
+
+

@@ -13,9 +13,9 @@ class settingsViewController: UIViewController {
     
     
     
-    var a : [User] = [User(name: "Politica de Privacidade", versao: "1.0.1", image: UIImage(systemName: "gear") ?? UIImage())]
+    var a : [User] = [User(name: "Versão do App", versao: "1.0.1", image: UIImage(systemName: "gear") ?? UIImage()),User(name: "Sobre Governo da Paraíba", image: UIImage.image )]
     
-    var b : [Avali] = [Avali(nameAva: "Avalie no App Store", image: UIImage(systemName: "square.and.arrow.up") ?? UIImage())]
+    var b : [Avali] = [Avali(nameAva: "App Store", image: UIImage(systemName: "storefront") ?? UIImage()),Avali(nameAva: "Compartilhar", image: UIImage(systemName: "square.and.arrow.up") ?? UIImage())]
     
     
     override func viewDidLoad() {
@@ -44,24 +44,26 @@ class settingsViewController: UIViewController {
 extension settingsViewController :  UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+        if indexPath.section == 0 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.id, for: indexPath) as? CustomTableViewCell
             
-            cell?.configSetupCell(date:a[indexPath.row])
+            cell?.configSetupCell(date:a[indexPath.row ])
             
             return cell ?? UITableViewCell()
-        } else {
+            
+        } else if indexPath.section == 1 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: AvaliacaoTableViewCell.avali, for: indexPath) as? AvaliacaoTableViewCell
             
-            cell?.configSetAva(aval: b[indexPath.row - 1])
+            cell?.configSetAva(aval: b[indexPath.row ])
             
             return cell ?? UITableViewCell()
             
             
         }
         
+        return UITableViewCell()
         
         
         
@@ -70,20 +72,36 @@ extension settingsViewController :  UITableViewDelegate , UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1 +  a.count
-        
+        if section  == 0 {
+            return a.count
+        } else if section == 1 {
+            return b.count
+        }
+        return  0
     }
-    
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "SOBRE"
+        
+        if section == 0 {
+            return "SOBRE"
+        } else if section == 1 {
+            return "AVALIAÇÃO"
+        } else {
+            return ""
+            
+            
+            
+            
+        }
+        
+        
+        
     }
     
-    
-    
-    
-    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
     
     
 }

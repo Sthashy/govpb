@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     func configTextFiel(placeholderlogin: UITextField,placeholderSenha:UITextField, nameButton : UIButton){
         
-        loginTextFiel.placeholder = "Digite seu login"
+        loginTextFiel.placeholder = "Digite seu email"
         senhaTextFiel.placeholder = "Digite sua senha"
         appendButtonConfirmar.setTitle("Confirmar", for: .normal)
         senhaTextFiel.isSecureTextEntry = true
@@ -50,6 +50,9 @@ class ViewController: UIViewController {
         navigationItem.backButtonTitle = "Voltar"
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
     
     
 }
@@ -65,6 +68,9 @@ extension ViewController : UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        self.loginTextFiel.keyboardType = .emailAddress
+        self.senhaTextFiel.keyboardType = .default
         
         
     }
