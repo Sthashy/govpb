@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-struct Avaliacao {
+struct Avali {
     
-    var name : String
+    var nameAva : String
     var image : UIImage
 }

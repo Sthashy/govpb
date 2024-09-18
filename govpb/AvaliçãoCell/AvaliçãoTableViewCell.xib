@@ -23,35 +23,37 @@
                             <constraint firstAttribute="width" constant="30" id="kjg-7e-hGA"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mT-mv-gyw">
-                        <rect key="frame" x="54" y="40" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2S-Qq-9En">
                         <rect key="frame" x="331" y="33" width="75" height="35"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        <connections>
+                            <action selector="apppendButtonAva:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="r6s-59-LTh"/>
+                        </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaK-Jl-Nfz">
+                        <rect key="frame" x="50" y="40" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="hyl-H0-q9e" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8pQ-CY-HOh"/>
                     <constraint firstItem="N2S-Qq-9En" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33" id="F1c-0X-gBO"/>
                     <constraint firstAttribute="trailing" secondItem="N2S-Qq-9En" secondAttribute="trailing" constant="7" id="UiV-6i-Oam"/>
+                    <constraint firstAttribute="bottom" secondItem="kaK-Jl-Nfz" secondAttribute="bottom" constant="40" id="YEG-Mf-gNZ"/>
                     <constraint firstItem="hyl-H0-q9e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="bkV-5v-LAx"/>
-                    <constraint firstItem="7mT-mv-gyw" firstAttribute="leading" secondItem="hyl-H0-q9e" secondAttribute="trailing" constant="14" id="djK-ud-lLH"/>
-                    <constraint firstItem="7mT-mv-gyw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="h1R-rP-aA9"/>
-                    <constraint firstAttribute="bottom" secondItem="7mT-mv-gyw" secondAttribute="bottom" constant="40" id="h3l-Ti-4su"/>
+                    <constraint firstItem="kaK-Jl-Nfz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="dyd-ld-zVI"/>
                     <constraint firstAttribute="bottom" secondItem="N2S-Qq-9En" secondAttribute="bottom" constant="33" id="kfs-ww-WJm"/>
+                    <constraint firstItem="kaK-Jl-Nfz" firstAttribute="leading" secondItem="hyl-H0-q9e" secondAttribute="trailing" constant="10" id="o28-Zx-V0P"/>
                     <constraint firstItem="hyl-H0-q9e" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35.670000000000002" id="qSD-vl-1B8"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="appendButtonAvalia" destination="N2S-Qq-9En" id="Bsg-aV-mDd"/>
-                <outlet property="imageAvaliacao" destination="hyl-H0-q9e" id="aPw-Gn-AWd"/>
-                <outlet property="nameLabel" destination="7mT-mv-gyw" id="W2C-s2-Jgz"/>
+                <outlet property="nameLabelPriv" destination="kaK-Jl-Nfz" id="WBd-gF-sSD"/>
+                <outlet property="viewImage" destination="hyl-H0-q9e" id="2Xb-6R-8lP"/>
             </connections>
             <point key="canvasLocation" x="200.76335877862596" y="7.394366197183099"/>
         </tableViewCell>

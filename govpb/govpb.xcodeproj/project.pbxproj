@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD5285992C9AFA2400E7E260 /* AvaliacaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5285982C9AFA2400E7E260 /* AvaliacaoTableViewCell.swift */; };
 		CD80A4D82C99240500F90D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80A4D72C99240500F90D66 /* AppDelegate.swift */; };
 		CD80A4DA2C99240500F90D66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80A4D92C99240500F90D66 /* SceneDelegate.swift */; };
 		CD80A4DC2C99240500F90D66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80A4DB2C99240500F90D66 /* ViewController.swift */; };
@@ -23,11 +24,11 @@
 		CD9954F12C9A4B330060F770 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9954EF2C9A4B330060F770 /* CustomTableViewCell.swift */; };
 		CD9954F22C9A4B330060F770 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9954F02C9A4B330060F770 /* CustomTableViewCell.xib */; };
 		CD9955062C9A83BA0060F770 /* Avaliacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9955052C9A83BA0060F770 /* Avaliacao.swift */; };
-		CD99550A2C9A842A0060F770 /* AvaliçãoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9955082C9A842A0060F770 /* AvaliçãoTableViewCell.swift */; };
 		CD99550B2C9A842A0060F770 /* AvaliçãoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9955092C9A842A0060F770 /* AvaliçãoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD5285982C9AFA2400E7E260 /* AvaliacaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaliacaoTableViewCell.swift; sourceTree = "<group>"; };
 		CD80A4D42C99240500F90D66 /* govpb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = govpb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD80A4D72C99240500F90D66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD80A4D92C99240500F90D66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		CD9954EF2C9A4B330060F770 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CD9954F02C9A4B330060F770 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		CD9955052C9A83BA0060F770 /* Avaliacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avaliacao.swift; sourceTree = "<group>"; };
-		CD9955082C9A842A0060F770 /* AvaliçãoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvaliçãoTableViewCell.swift"; sourceTree = "<group>"; };
 		CD9955092C9A842A0060F770 /* AvaliçãoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "AvaliçãoTableViewCell.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,9 +61,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD5285972C9AF9BF00E7E260 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		CD80A4CB2C99240500F90D66 = {
 			isa = PBXGroup;
 			children = (
+				CD5285972C9AF9BF00E7E260 /* New Group */,
 				CD9954EB2C9A4A420060F770 /* Model */,
 				CD9955072C9A84030060F770 /* AvaliçãoCell */,
 				CD9954EE2C9A4AF80060F770 /* Cell */,
@@ -153,8 +161,8 @@
 		CD9955072C9A84030060F770 /* AvaliçãoCell */ = {
 			isa = PBXGroup;
 			children = (
-				CD9955082C9A842A0060F770 /* AvaliçãoTableViewCell.swift */,
 				CD9955092C9A842A0060F770 /* AvaliçãoTableViewCell.xib */,
+				CD5285982C9AFA2400E7E260 /* AvaliacaoTableViewCell.swift */,
 			);
 			name = "AvaliçãoCell";
 			path = "AvaliçãoCell";
@@ -241,9 +249,9 @@
 				CD9954F12C9A4B330060F770 /* CustomTableViewCell.swift in Sources */,
 				CD80A4F22C99284200F90D66 /* telaHomeViewController.swift in Sources */,
 				CD9955062C9A83BA0060F770 /* Avaliacao.swift in Sources */,
+				CD5285992C9AFA2400E7E260 /* AvaliacaoTableViewCell.swift in Sources */,
 				CD80A4D82C99240500F90D66 /* AppDelegate.swift in Sources */,
 				CD80A4DA2C99240500F90D66 /* SceneDelegate.swift in Sources */,
-				CD99550A2C9A842A0060F770 /* AvaliçãoTableViewCell.swift in Sources */,
 				CD80A4FE2C992D4F00F90D66 /* settingsViewController.swift in Sources */,
 				CD9954ED2C9A4AB70060F770 /* User.swift in Sources */,
 			);
