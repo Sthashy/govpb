@@ -8,11 +8,12 @@
 import UIKit
 
 class AvaliacaoTableViewCell: UITableViewCell {
-
-    static var ava : String = String(describing: AvaliacaoTableViewCell.ava)
+    
+    static var avali : String = String(describing: AvaliacaoTableViewCell.avali)
+    
     static func Nib()-> UINib {
         
-        return UINib(nibName: ava, bundle: nil)
+        return UINib(nibName: avali, bundle: nil)
         
     }
     
@@ -26,13 +27,13 @@ class AvaliacaoTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     func configSetAva(aval: Avali){
         
         viewImage.image = aval.image
         nameLabelPriv.text = aval.nameAva
     }
-
+    
     
     
     

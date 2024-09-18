@@ -38,8 +38,8 @@ class CustomTableViewCell: UITableViewCell {
         
     }
     
-   
-  
+    
+    
     
     func configVersao(){
         

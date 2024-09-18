@@ -8,7 +8,7 @@
 import UIKit
 
 class settingsViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -21,23 +21,23 @@ class settingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
-
-
+        
+        
     }
     
-
+    
     func configTableView(){
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CustomTableViewCell.Nib(), forCellReuseIdentifier: CustomTableViewCell.id)
-        tableView.register(AvaliacaoTableViewCell.Nib(), forCellReuseIdentifier: AvaliacaoTableViewCell.ava)
+        tableView.register(AvaliacaoTableViewCell.Nib(), forCellReuseIdentifier: AvaliacaoTableViewCell.avali)
         
     }
     
     
-   
-
+    
+    
 }
 
 
@@ -46,7 +46,6 @@ extension settingsViewController :  UITableViewDelegate , UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             
-            
             let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.id, for: indexPath) as? CustomTableViewCell
             
             cell?.configSetupCell(date:a[indexPath.row])
@@ -54,34 +53,38 @@ extension settingsViewController :  UITableViewDelegate , UITableViewDataSource 
             return cell ?? UITableViewCell()
         } else {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: AvaliacaoTableViewCell.ava, for: indexPath) as? AvaliacaoTableViewCell
-        
+            let cell = tableView.dequeueReusableCell(withIdentifier: AvaliacaoTableViewCell.avali, for: indexPath) as? AvaliacaoTableViewCell
+            
             cell?.configSetAva(aval: b[indexPath.row - 1])
             
             return cell ?? UITableViewCell()
             
             
         }
+        
+        
+        
+        
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 1 +  a.count
+        
+    }
     
-            return 1 +  a.count
-          
-        }
-        
-        
-       
+    
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "SOBRE"
     }
-        
-                
-        
-        
-        
-        
-        
-    }
+    
+    
+    
+    
+    
+    
+    
+}
 

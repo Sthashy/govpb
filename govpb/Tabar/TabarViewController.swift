@@ -12,9 +12,9 @@ class TabarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-AddController()
+        AddController()
         configTabar()
-
+        
     }
     
     

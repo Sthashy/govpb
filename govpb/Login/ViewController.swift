@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var loginTextFiel: UITextField!
@@ -19,17 +19,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-configTextFiel(placeholderlogin: loginTextFiel, placeholderSenha: senhaTextFiel,nameButton: appendButtonConfirmar )
+        
+        configTextFiel(placeholderlogin: loginTextFiel, placeholderSenha: senhaTextFiel,nameButton: appendButtonConfirmar )
     }
-
+    
     
     func configTextFiel(placeholderlogin: UITextField,placeholderSenha:UITextField, nameButton : UIButton){
         
         loginTextFiel.placeholder = "Digite seu login"
         senhaTextFiel.placeholder = "Digite sua senha"
         appendButtonConfirmar.setTitle("Confirmar", for: .normal)
-        senhaTextFiel.isSecureTextEntry = true 
+        senhaTextFiel.isSecureTextEntry = true
         
         loginTextFiel.delegate = self
         senhaTextFiel.delegate = self
@@ -46,12 +46,12 @@ configTextFiel(placeholderlogin: loginTextFiel, placeholderSenha: senhaTextFiel,
         TabarViewController
         
         navigationController?.pushViewController(controller ?? UIViewController(), animated: true)
-        navigationController?.navigationBar.isHidden = true 
+        navigationController?.navigationBar.isHidden = true
         navigationItem.backButtonTitle = "Voltar"
     }
     
     
-
+    
 }
 
 
